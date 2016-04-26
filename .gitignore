@@ -1,3 +1,4 @@
-logs
-*.log
+.DS_Store
 node_modules
+npm-debug.log
+index.es5.js
