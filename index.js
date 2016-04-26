@@ -47,6 +47,6 @@ const transformDecl = (decl) => {
   decl.value = postcssTry(() => transformColor(decl.value, decl.source), decl.source )
 };
 
-export default postcss.plugin('postcss-color-mix', () =>
+export default postcss.plugin('postcss-shades', () =>
   (style) => { style.walkDecls(transformDecl); }
 );

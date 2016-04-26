@@ -72,7 +72,7 @@ var transformDecl = function transformDecl(decl) {
   }, decl.source);
 };
 
-exports.default = _postcss2.default.plugin('postcss-color-mix', function () {
+exports.default = _postcss2.default.plugin('postcss-shades', function () {
   return function (style) {
     style.walkDecls(transformDecl);
   };
