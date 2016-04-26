@@ -3,7 +3,7 @@ import balanced from 'balanced-match';
 import Color from 'color';
 import { try as postcssTry } from 'postcss-message-helpers';
 
-const shades = (color, weight, black = '#000000', white = '#ffffff', hex = true) => {
+const shades = (color, weight, white = '#ffffff', black = '#000000', hex = true) => {
     let rgbC = Color(color).rgbArray();
     let refC = rgbC;
     let r = rgbC[0];
@@ -50,3 +50,5 @@ const transformDecl = (decl) => {
 export default postcss.plugin('postcss-shades', () =>
   (style) => { style.walkDecls(transformDecl); }
 );
+
+module.exports = exports["default"];

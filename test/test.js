@@ -21,14 +21,14 @@ it('color with regular black and white', (done)=> {
 
 it('color with custom black and white', (done)=> {
   verify(
-      `a { color: shades(#E0211B, 600, #400000, #ffefe9); }`,
+      `a { color: shades(#E0211B, 600, #ffefe9, #400000); }`,
       `a { color: #C01A16; }`,
   done);
 });
 
 it('color in rgb', (done)=> {
   verify(
-      `a { color: shades(#E0211B, 600, #400000, #ffefe9, false); }`,
+      `a { color: shades(#E0211B, 600, #ffefe9, #400000, false); }`,
       `a { color: rgb(192, 26, 22); }`,
   done);
 });
