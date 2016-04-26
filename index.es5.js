@@ -80,5 +80,4 @@ exports.default = _postcss2.default.plugin('postcss-shades', function () {
 
 
 module.exports = exports["default"];
-module.exports = exports['default'];
 

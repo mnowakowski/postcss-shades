@@ -1,6 +1,6 @@
 {
   "name": "postcss-shades",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get palette color shades in PostCSS",
   "main": "index.es5.js",
   "scripts": {
@@ -19,11 +19,13 @@
   "devDependencies": {
     "assert": "^1.3.0",
     "babel-cli": "^6.7.7",
-    "babel-plugin-add-module-exports": "^0.1.3",
     "babel-preset-es2015": "^6.6.0",
     "babel-register": "^6.7.2",
     "mocha": "^2.4.5",
     "npm-run-all": "^1.8.0"
   },
-  "author": "Marcin Nowakowski"
+  "author": "Marcin Nowakowski",
+  "babel": {
+      "presets": ["es2015"]
+  }
 }
