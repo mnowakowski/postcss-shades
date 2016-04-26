@@ -21,8 +21,8 @@ var _postcssMessageHelpers = require('postcss-message-helpers');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var shades = function shades(color, weight) {
-  var black = arguments.length <= 2 || arguments[2] === undefined ? '#000000' : arguments[2];
-  var white = arguments.length <= 3 || arguments[3] === undefined ? '#ffffff' : arguments[3];
+  var white = arguments.length <= 2 || arguments[2] === undefined ? '#ffffff' : arguments[2];
+  var black = arguments.length <= 3 || arguments[3] === undefined ? '#000000' : arguments[3];
   var hex = arguments.length <= 4 || arguments[4] === undefined ? true : arguments[4];
 
   var rgbC = (0, _color2.default)(color).rgbArray();
@@ -77,5 +77,8 @@ exports.default = _postcss2.default.plugin('postcss-shades', function () {
     style.walkDecls(transformDecl);
   };
 });
+
+
+module.exports = exports["default"];
 module.exports = exports['default'];
 
