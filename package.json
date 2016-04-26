@@ -1,5 +1,5 @@
 {
-  "name": "postcss-palette-shades",
+  "name": "postcss-shades",
   "version": "0.0.1",
   "description": "Get palette color shades in PostCSS",
   "main": "index.es5.js",
