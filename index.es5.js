@@ -54,13 +54,14 @@ var transformColor = function transformColor(string, source) {
     return string;
   }
 
-  var value = (0, _balancedMatch2.default)('(', ')', string).body;
+  var shadeContent = (0, _balancedMatch2.default)('shades(', ')', string);
+  var value = shadeContent.body;
 
   if (!value) {
     throw new Error('Missing closing parentheses in "' + string + '"', source);
   }
 
-  return shades.apply(null, value.split(/,\s*(?![^()]*\))/));
+  return shadeContent.pre + shades.apply(null, value.split(/,\s*(?![^()]*\))/)) + shadeContent.post;
 };
 
 var transformDecl = function transformDecl(decl) {
