@@ -33,11 +33,12 @@ const transformColor = (string, source) => {
     return string;
   }
 
-  const value = balanced('(', ')', string).body;
+  const shadeContent = balanced('shades(', ')', string);
+  const value = shadeContent.body;
 
   if (!value) { throw new Error(`Missing closing parentheses in "${string}"`, source); }
 
-  return shades.apply(null, value.split(/,\s*(?![^()]*\))/));
+  return shadeContent.pre + shades.apply(null, value.split(/,\s*(?![^()]*\))/)) + shadeContent.post;
 };
 
 const transformDecl = (decl) => {

@@ -26,6 +26,13 @@ it('color with custom black and white', (done)=> {
   done);
 });
 
+it('color for border', (done)=> {
+  verify(
+      `a { border: 1px solid shades(#E0211B, 600, #ffefe9, #400000); }`,
+      `a { border: 1px solid #C01A16; }`,
+  done);
+});
+
 it('color in rgb', (done)=> {
   verify(
       `a { color: shades(#E0211B, 600, #ffefe9, #400000, false); }`,
